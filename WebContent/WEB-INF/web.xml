@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>web</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+      
+      <servlet-name>FirstServlet</servlet-name>
+      <servlet-class>com.ningmeng.FirstServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>FirstServlet</servlet-name>
+      <url-pattern>/FirstServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>TableServlet</servlet-name>
+      <servlet-class>com.ningmeng.TableServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>TableServlet</servlet-name>
+      <url-pattern>/TableServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>fitServlet</servlet-name>
+      <servlet-class>com.ningmeng.fitServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>fitServlet</servlet-name>
+      <url-pattern>/fitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>agenaServlet</servlet-name>
+      <servlet-class>com.ningmeng.agenaServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>agenaServlet</servlet-name>
+      <url-pattern>/agenaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>insertServlet</servlet-name>
+      <servlet-class>com.ningmeng.insertServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>insertServlet</servlet-name>
+      <url-pattern>/insertServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>deleteServlet</servlet-name>
+      <servlet-class>com.ningmeng.deleteServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>deleteServlet</servlet-name>
+      <url-pattern>/deleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>kindServlet</servlet-name>
+      <servlet-class>com.ningmeng.kindServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>kindServlet</servlet-name>
+      <url-pattern>/kindServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>infodeviceServlet</servlet-name>
+      <servlet-class>com.ningmeng.infodeviceServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>infodeviceServlet</servlet-name>
+      <url-pattern>/infodeviceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      
+      <servlet-name>registerServlet</servlet-name>
+      <servlet-class>com.ningmeng.registerServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>registerServlet</servlet-name>
+      <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
