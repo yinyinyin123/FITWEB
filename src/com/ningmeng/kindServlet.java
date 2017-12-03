@@ -76,19 +76,12 @@ public class kindServlet extends HttpServlet {
              out = response.getWriter();
              while(rs.next()){
             	 username_exist = true;
-            	 login_ok = true;
+            	 login_ok = true;            
             	 if(rs.getString("student").equals("n")){
             		 out.print("successn");
             	 }else{
             		 out.print("successy");
             	 }
-            	 
-             }
-             if(!username_exist){
-            	 out.println("usename not exist");
-             }
-             else if(!login_ok){
-            	 out.println("password not correct");
              }
         	 out.flush();
         	 out.close();

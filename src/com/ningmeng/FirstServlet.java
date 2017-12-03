@@ -70,7 +70,7 @@ public class FirstServlet extends HttpServlet {
     	 String username = request.getParameter("username");
     	 String password = request.getParameter("password");
          try{
-        	 Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true","root","yinyin");
+        	 Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true&autoReconnect=true&failOverReadOnly=false","root","yinyin");
         	 Statement stmt = connect.createStatement();  
              ResultSet rs = stmt.executeQuery("select * from users_app where username='"+username+"'");
              PrintWriter out = response.getWriter();

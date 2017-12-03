@@ -108,4 +108,16 @@
       <servlet-name>registerServlet</servlet-name>
       <url-pattern>/registerServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+      
+      <servlet-name>matchServlet</servlet-name>
+      <servlet-class>com.ningmeng.matchServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>matchServlet</servlet-name>
+      <url-pattern>/matchServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
