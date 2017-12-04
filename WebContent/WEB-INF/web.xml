@@ -120,4 +120,16 @@
       <servlet-name>matchServlet</servlet-name>
       <url-pattern>/matchServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+      
+      <servlet-name>matchifoServlet</servlet-name>
+      <servlet-class>com.ningmeng.matchifoServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>matchifoServlet</servlet-name>
+      <url-pattern>/matchifoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
