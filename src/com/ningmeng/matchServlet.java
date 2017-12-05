@@ -47,7 +47,9 @@ public class matchServlet extends HttpServlet {
     	 ArrayList<String> matchID_ing = new ArrayList<String>();
     	 ArrayList<String> matchname_ing = new ArrayList<String>();
     	 ArrayList<String> matchID_ed = new ArrayList<String>();
-    	 ArrayList<String> matchname_ed = new ArrayList<String>();   	 
+    	 ArrayList<String> matchname_ed = new ArrayList<String>();
+    	 ArrayList<String> matchtype_ed = new ArrayList<String>();
+    	 ArrayList<String> matchtype_ing = new ArrayList<String>();
     	 try {  
           	Class.forName("com.mysql.jdbc.Driver"); 
             System.out.println("Success loading Mysql Driver!");  
@@ -58,18 +60,20 @@ public class matchServlet extends HttpServlet {
     	 try{
         	 Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true","root","yinyin");
         	 Statement stmt = connect.createStatement();  
-             ResultSet rs = stmt.executeQuery("select * from mtable");
+             ResultSet rs = stmt.executeQuery("select * from matchtable");
              //PrintWriter out = response.getWriter();
              //out = response.getWriter();
              while(rs.next()){
-                 String time = rs.getString("matchtime");
+                 String time = rs.getString("joinendtime");
                  if(time.compareTo(date) < 0){
                 	 matchID_ed.add(rs.getString("matchID"));
                 	 matchname_ed.add(rs.getString("matchname"));
+                	 matchtype_ed.add(rs.getString("type"));
                  }
                  else{
                 	 matchID_ing.add(rs.getString("matchID"));
                 	 matchname_ing.add(rs.getString("matchname"));
+                	 matchtype_ing.add(rs.getString("type"));
                  }   
              }
          }catch(SQLException e){
@@ -86,6 +90,8 @@ public class matchServlet extends HttpServlet {
     	 js.element("matchid_ed", matchID_ed);
          js.element("matchname_ing", matchname_ing);
          js.element("matchname_ed",matchname_ed);
+         js.element("matchtype_ed", matchtype_ed);
+         js.element("matchtype_ing", matchtype_ing);
     	 response.getWriter().print(js);
     	 
      }

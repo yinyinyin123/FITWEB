@@ -28,6 +28,7 @@ public class matchifoServlet extends HttpServlet {
 	private String matchifo;
 	private String matchname;
 	private String joinway;
+	private String type;
      public matchifoServlet(){
     	 super();
      }
@@ -67,7 +68,7 @@ public class matchifoServlet extends HttpServlet {
     	 try{
         	 Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=true","root","yinyin");
         	 Statement stmt = connect.createStatement();  
-             ResultSet rs = stmt.executeQuery("select * from gtable where matchID='"+matchid+"'");
+             ResultSet rs = stmt.executeQuery("select * from matchtable where matchID='"+matchid+"'");
 //             //PrintWriter out = response.getWriter();
              //out = response.getWriter();
              while(rs.next()){
@@ -78,6 +79,7 @@ public class matchifoServlet extends HttpServlet {
                   matchtime = rs.getString("matchtime");
                   matchifo = rs.getString("matchifo");
                   joinway = rs.getString("joinway");
+                  type = rs.getString("type");
                  
              }
 //        	 String sql="insert into agenatable(username,time,agena) value(?,?,?)";
@@ -103,6 +105,7 @@ public class matchifoServlet extends HttpServlet {
 		 js.put("matchposi",matchposi);
 		 js.put("matchhost",matchhost);
 		 js.put("joinway", joinway);
+		 js.put("type",type);
     	 response.getWriter().print(js);
     	 
      }
