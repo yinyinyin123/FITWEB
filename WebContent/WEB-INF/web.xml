@@ -132,4 +132,39 @@
       <servlet-name>matchifoServlet</servlet-name>
       <url-pattern>/matchifoServlet</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+      
+      <servlet-name>insdevServlet</servlet-name>
+      <servlet-class>com.ningmeng.insdevServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>insdevServlet</servlet-name>
+      <url-pattern>/insdevServlet</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+      
+      <servlet-name>deviceServlet</servlet-name>
+      <servlet-class>com.ningmeng.deviceServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>deviceServlet</servlet-name>
+      <url-pattern>/deviceServlet</url-pattern>
+  </servlet-mapping>
+       <servlet>
+      
+      <servlet-name>userdeviceServlet</servlet-name>
+      <servlet-class>com.ningmeng.userdeviceServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>userdeviceServlet</servlet-name>
+      <url-pattern>/userdeviceServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
