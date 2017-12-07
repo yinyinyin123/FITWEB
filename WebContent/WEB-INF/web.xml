@@ -167,4 +167,28 @@
       <servlet-name>userdeviceServlet</servlet-name>
       <url-pattern>/userdeviceServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+      
+      <servlet-name>freedeviceServlet</servlet-name>
+      <servlet-class>com.ningmeng.freedeviceServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>freedeviceServlet</servlet-name>
+      <url-pattern>/freedeviceServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+      
+      <servlet-name>deldevServlet</servlet-name>
+      <servlet-class>com.ningmeng.deldevServlet</servlet-class>
+      
+  </servlet>
+  <servlet-mapping>
+      
+      <servlet-name>deldevServlet</servlet-name>
+      <url-pattern>/deldevServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
